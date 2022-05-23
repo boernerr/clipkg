@@ -1,2 +1,6 @@
-'''This file should be empty as it's not the actual package.
-the package resides in ./clipkg.__init__.py  '''
+'''This is the package init file. I can declare project specific directories here.'''
+def hello():
+    print('hello from my_function')
+
+def another_function():
+    print('hello from another_function')

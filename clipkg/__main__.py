@@ -4,11 +4,11 @@ import argparse
 import sys
 
 # Absolute import:
-# from clipkg import hello, another_function
-# from clipkg.moduleA import hello_moduleA, dummy_run_func
+from clipkg import hello, another_function
+from clipkg.moduleA import hello_moduleA, dummy_run_func
 # Relative import:
-from . import hello, another_function
-from . clipkg.moduleA import hello_moduleA, dummy_run_func
+# from . import hello, another_function
+# from . clipkg.moduleA import hello_moduleA, dummy_run_func
 
 # Don't need these for now, use argparse module instead!
 # opts = [opt for opt in sys.argv[1:] if opt.startswith('-')]
