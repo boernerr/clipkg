@@ -5,7 +5,7 @@ import sys
 
 # Absolute import:
 # from clipkg import hello, another_function
-# from clipkg.moduleA import hello_moduleA
+# from clipkg.moduleA import hello_moduleA, dummy_run_func
 # Relative import:
 from . import hello, another_function
 from . clipkg.moduleA import hello_moduleA, dummy_run_func
@@ -16,7 +16,7 @@ from . clipkg.moduleA import hello_moduleA, dummy_run_func
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--run', help='the argument value should =="run" ') # Test this arg by passing 'run' as the value of the arg
+    parser.add_argument('-r', '--run', help='the argument value should =="run" ') # Test this arg by passing 'run' as the value of the arg
     parser.add_argument('--arg1', default='default')
     parser.add_argument('--arg2', default='default')
     args = parser.parse_args()
