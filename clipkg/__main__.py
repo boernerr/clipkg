@@ -6,28 +6,26 @@ import sys
 # Absolute import:
 from clipkg import hello, another_function
 from clipkg.moduleA import hello_moduleA, dummy_run_func
+# from clipkg.src import gluestick
 # Relative import:
 # from . import hello, another_function
 # from . clipkg.moduleA import hello_moduleA, dummy_run_func
 
-# Don't need these for now, use argparse module instead!
-# opts = [opt for opt in sys.argv[1:] if opt.startswith('-')]
-# args = [arg for arg in sys.argv[1:] if not arg.startswith('-')]
-
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-r', '--run', help='the argument value should =="run" ') # Test this arg by passing 'run' as the value of the arg
-    parser.add_argument('--arg1', default='default')
-    parser.add_argument('--arg2', default='default')
+    parser.add_argument('-r', '--run', action='store_true', help='the argument value should =="run" ')
+    parser.add_argument('-tf', '--transform', action='store_true')
+    parser.add_argument('-pr', '--predict', action='store_true')
     args = parser.parse_args()
     print(f'args supplied: {args}')
     # args.__arg_name__ is a string variable:
 
-    if args.run=='run':
+    if args.run:
         dummy_run_func()
-
+    # if args.transform:
+    #     gluestick.mk_data()
+    # if args.predict:
+    #     gluestick.predict()
 
 if __name__ == '__main__':
     main()
-
-

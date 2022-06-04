@@ -9,5 +9,5 @@ def dummy_run_func():
 
 
 if __name__ == "__main__":
-    """This runs when you execute '$ python3 mypackage/mymodule.py'"""
+    """This runs when you execute '$ python3 ./clipkg/moduleA.py'"""
     hello_moduleA()
