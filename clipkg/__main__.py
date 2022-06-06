@@ -7,7 +7,7 @@ import sys
 from clipkg import hello, another_function
 from clipkg.moduleA import hello_moduleA, dummy_run_func
 from clipkg.src import dummy
-# from clipkg.src import gluestick
+from clipkg.src import gluestick # commented out for now;
 # Relative import:
 # from . import hello, another_function
 # from . clipkg.moduleA import hello_moduleA, dummy_run_func
@@ -26,8 +26,8 @@ def main():
         dummy_run_func()
     if args.dummy:
         dummy.src_dummy_func()
-    # if args.transform:
-    #     gluestick.mk_data()
+    if args.transform:
+        gluestick.mk_data()
     # if args.predict:
     #     gluestick.predict()
 
