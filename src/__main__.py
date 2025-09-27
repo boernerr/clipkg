@@ -4,8 +4,8 @@ import argparse
 import sys
 
 # Absolute import:
-from clipkg import hello, another_function
-from clipkg.moduleA import hello_moduleA, dummy_run_func
+from src import hello, another_function
+from src.moduleA import hello_moduleA, dummy_run_func
 # Relative import:
 # from . import hello, another_function
 # from . clipkg.moduleA import hello_moduleA, dummy_run_func
