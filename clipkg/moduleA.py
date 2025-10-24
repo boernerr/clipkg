@@ -5,7 +5,8 @@ def another_function():
     print('hello from another_function')
 
 def dummy_run_func():
-    print(f'this simulates running a func from a module at file {__file__}')
+    this_function_name = dummy_run_func.__name__
+    print(f'this simulates running the function: "{this_function_name}()" from a module at file: "{__file__}"')
 
 
 if __name__ == "__main__":
